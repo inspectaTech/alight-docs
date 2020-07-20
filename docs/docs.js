@@ -13,7 +13,10 @@
 
 document.addEventListener('DOMContentLoaded', async function () {
 
-  if(location.pathname.includes("/index.html") || (location.pathname.split("/dist/"))[1].length == 0){
+  let is_local = (location.pathname.includes('alight-docs/docs/')) ? true : false;
+  if(location.pathname.includes("/index.html") ||
+  is_local && (location.pathname.split("/docs/"))[1].length == 0 || 
+  !is_local && (location.pathname.split("/alight-docs/"))[1].length == 0 ){
     document.querySelector("body").classList.add("home");
     let spans = Array.from(document.querySelectorAll(".ancestors"));
     if(spans.length > 0)
