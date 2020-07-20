@@ -1,0 +1,131 @@
+body {
+  font-size: 15px !important; }
+
+div.category:nth-of-type(1) {
+  display: none; }
+
+.core {
+  font-size: 0.8rem !important; }
+  .core h1 {
+    font-size: 1.6rem !important; }
+  .core .page-title h1:nth-of-type(1) {
+    text-shadow: 2px 2px 2px #ccc;
+    margin-bottom: 2rem; }
+  .core h2 {
+    font-size: 1.4rem !important; }
+  .core h3 {
+    font-size: 1.2rem !important; }
+  .core h3 {
+    font-size: 1rem !important; }
+  .core h5 {
+    font-size: .8rem; }
+  .core p {
+    font-size: 0.8rem !important;
+    margin-bottom: .5rem; }
+  .core .description {
+    padding: .5rem 1rem;
+    margin: .5rem 0;
+    border-radius: 5px; }
+    .core .descriptiontd {
+      background-color: #f2f2f2; }
+    .core .description p {
+      font-size: 1rem;
+      margin: unset; }
+  .core .code-name {
+    font-size: 1.2rem !important; }
+  .core .details a {
+    height: unset !important;
+    padding: .25rem .5rem; }
+  .core .method-parameter {
+    font-size: .9rem; }
+  .core .tag-source span a {
+    color: #a6a6c4; }
+  .core .members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100%);
+    gap: 1rem; }
+    .core .members .member {
+      flex: 1 auto;
+      display: grid;
+      grid-template-areas: "h4 span" "description description" "h5 h5" "table table" "h52 h52" "example example" "details details" "columns1 columns1" "columns2 columns2" "columns3 columns3" "columns4 columns4";
+      border-radius: 7px;
+      border: 1px solid #dee1e5;
+      padding: 1rem;
+      /*the h5s mess it up - theyre too variable*/ }
+      .core .members .member > span {
+        grid-area: span; }
+      .core .members .member > h4 {
+        grid-area: h4; }
+      .core .members .member > h5:nth-of-type(1) {
+        grid-area: h5; }
+      .core .members .member > h5:nth-of-type(2) {
+        grid-area: h52; }
+      .core .members .member .prettyprint {
+        grid-area: example; }
+      .core .members .member .table-container {
+        grid-area: table; }
+      .core .members .member .description {
+        grid-area: description; }
+      .core .members .member .details {
+        grid-area: details; }
+      .core .members .member .method-parameter.columns:nth-of-type(1) {
+        grid-area: columns1; }
+      .core .members .member .method-parameter.columns:nth-of-type(2) {
+        grid-area: columns2; }
+      .core .members .member .method-parameter.columns:nth-of-type(3) {
+        grid-area: columns3; }
+      .core .members .member .method-parameter.columns:nth-of-type(4) {
+        grid-area: columns4; }
+      .core .members .member:after {
+        display: none; }
+    .core .members .mixes:nth-child(1) {
+      margin-top: 1rem; }
+
+.table-container {
+  font-size: .8rem; }
+  .table-container tr th {
+    font-size: .9rem; }
+    .table-container tr th:nth-child(4) {
+      background: #2F4858;
+      color: #8abeb7; }
+  .table-container td.name code, .table-container td p {
+    font-size: .8rem; }
+
+.logo {
+  display: flex;
+  align-items: center; }
+  .logo img {
+    width: 1.5rem; }
+
+#main .sidebar, #main .side-nav {
+  width: 10rem;
+  padding: 1rem;
+  font-size: .8rem;
+  /*hide-scroll*/
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  /*hides in firefox*/ }
+  #main .sidebar::-webkit-scrollbar, #main .side-nav::-webkit-scrollbar {
+    display: none; }
+#main .sidebar .search-wrapper {
+  margin: 0 0 .5rem; }
+#main .sidebar .category h2 {
+  cursor: pointer;
+  margin-top: .25rem; }
+#main .sidebar .category h3, #main .sidebar .category ul {
+  display: none;
+  margin-top: .5rem; }
+#main .sidebar .category.expand h3 {
+  display: block;
+  cursor: pointer; }
+#main .sidebar .category.expand ul.expand {
+  display: block; }
+
+.home .core .content section:nth-child(n+4) header h2 {
+  font-size: 0.8rem !important;
+  line-height: 1rem;
+  margin-bottom: 1rem; }
+  .home .core .content section:nth-child(n+4) header h2 .ancestors {
+    margin-right: 1rem; }
+
+/*# sourceMappingURL=docs.css.map */

@@ -1,0 +1,146 @@
+$mp: !important;
+body{
+  font-size: 15px !important;
+}
+
+// hide the default category display menu
+div.category:nth-of-type(1){display:none;}
+
+.core{
+    font-size: .8rem $mp;
+    h1{font-size: 1.6rem $mp; }
+    .page-title h1:nth-of-type(1) {
+      text-shadow: 2px 2px 2px #ccc;
+      margin-bottom: 2rem;
+      // font-size: 1.7rem $mp;
+    }
+    h2{font-size: 1.4rem $mp; }
+    h3{font-size: 1.2rem $mp; }
+    h3{font-size: 1rem $mp; }
+    h5{font-size: .8rem;}
+    p{font-size: .8rem $mp; margin-bottom: .5rem;}
+
+    .description {
+      &td { background-color: #f2f2f2;}
+      padding: .5rem 1rem;
+      margin: .5rem 0;
+      border-radius: 5px;
+      p{font-size: 1rem; margin: unset;}
+    }
+
+    .code-name{
+      font-size: 1.2rem $mp;
+    }
+    .details a{height: unset $mp; padding: .25rem .5rem;}
+    .method-parameter {
+      font-size: .9rem;
+    }
+    .tag-source span a{color: #a6a6c4;}
+    .members{
+      display: grid;
+      // grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit,100%);
+      gap: 1rem;
+      // display: flex;
+      // flex-flow: row wrap;
+      .member{
+        flex: 1 auto;
+        display:grid;
+        grid-template-areas:
+        "h4 span"
+        "description description"
+        "h5 h5" "table table"
+        "h52 h52"
+        "example example"
+        "details details"
+        "columns1 columns1"
+        "columns2 columns2"
+        "columns3 columns3"
+        "columns4 columns4";
+        border-radius: 7px;
+        border: 1px solid #dee1e5;
+        // box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+        // box-shadow: 4px 4px 7px 2px rgba(0,0,0,0.2);
+        padding: 1rem;
+        &>span{ grid-area: span;}
+        &>h4{grid-area: h4;}
+        &>h5:nth-of-type(1){grid-area: h5;}
+        &>h5:nth-of-type(2){grid-area: h52;}
+        .prettyprint{grid-area: example;}
+        .table-container{grid-area: table;}
+        .description{grid-area: description;}
+        .details{grid-area: details;}
+        .method-parameter.columns:nth-of-type(1){grid-area: columns1;}
+        .method-parameter.columns:nth-of-type(2){grid-area: columns2;}
+        .method-parameter.columns:nth-of-type(3){grid-area: columns3;}
+        .method-parameter.columns:nth-of-type(4){grid-area: columns4;}
+
+        &:after{display: none;}
+        /*the h5s mess it up - theyre too variable*/
+      }
+      .mixes:nth-child(1){margin-top: 1rem;}
+    }
+}
+.table-container{font-size: .8rem;
+  tr th{
+    font-size: .9rem;
+    &:nth-child(4){
+      // background: green;
+      // max-width:20px;
+      background: #2F4858;
+      color: #8abeb7;
+    };
+  }
+  td.name code, td p{font-size: .8rem;}
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  img{
+      width: 1.5rem;
+  }
+}
+#main{
+  .sidebar, .side-nav{
+    width: 10rem;
+    padding: 1rem;
+    font-size: .8rem;
+    /*hide-scroll*/
+    -ms-overflow-style: none;
+    scrollbar-width: none;/*hides in firefox*/
+    &::-webkit-scrollbar{
+      display: none;
+    }
+  }
+  .sidebar{
+    .search-wrapper{
+      margin: 0 0 .5rem;
+    }
+    .category{
+        h2{cursor: pointer; margin-top: .25rem;}
+        h3,ul{display: none; margin-top: .5rem;}
+      &.expand{
+        h3{ display: block; cursor: pointer; }
+        ul.expand{display: block;}
+      }// category expand
+    }//category
+  }//sidebar
+}
+
+.home{
+  .core .content{
+    section:nth-child(n+4){
+      // border: 1px solid red;
+      header{
+        h2{font-size: 0.8rem !important;
+          line-height: 1rem;
+          margin-bottom: 1rem;
+          .ancestors{
+            margin-right:1rem;
+          }//ancestors
+        }
+      }
+    }
+  }
+}
